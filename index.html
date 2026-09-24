@@ -1,0 +1,381 @@
+
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Andika JB — Jual Beli Akun Game</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: hsl(193, 78%, 47%);
+    --bg: #14171F;
+--bg-panel: #1C202B;
+--bg-panel-2: #232838;
+--line: #313749;
+--text: #F1EFE9;
+--muted: #8B90A3;
+--accent: #F2B705;      
+--accent-2: #D64545;    
+--accent-contrast: #14171F;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-sizing: border-box;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg: #0F1116;
+      --bg-panel: #171A22;
+      --bg-panel-2: #1E2230;
+      --line: #2A2F3F;
+      --text: #ECEEF3;
+      --muted: #9096AC;
+    }
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  html, body{ height: 100%; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  h1,h2,h3,.display{ font-family: 'Sora', 'Inter', sans-serif; letter-spacing: -0.01em; }
+ 
+  .wrap{ max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+ 
+  /* subtle background t
+  .bg-glow{
+    position: fixed; inset: 0; z-index: -1;
+    background:
+      radial-gradient(600px 400px at 85% -5%, rgba(91,140,255,0.20), transparent 60%),
+      radial-gradient(500px 380px at 10% 15%, rgba(110,231,168,0.14), transparent 60%);
+  }
+ 
+  header{
+    position: sticky; top: 0; z-index: 20;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: rgba(15,17,22,0.72);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 16px 0;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; font-weight:700; font-size:1.05rem; }
+  .brand .dot{
+    width:10px; height:10px; border-radius:3px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    flex-shrink:0;
+  }
+  .nav a.cta{
+    background: var(--accent);
+    color: var(--accent-contrast);
+    font-weight:600;
+    padding: 9px 16px;
+    border-radius: 8px;
+    text-decoration:none;
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+ 
+  /* HERO */
+  .hero{ padding: 72px 0 56px; }
+  .kicker{
+    color: var(--accent);
+    font-weight:600;
+    font-size: 0.95rem;
+    margin: 0 0 14px;
+  }
+  .hero h1{
+    font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+    font-weight: 800;
+    margin: 0 0 20px;
+    max-width: 14ch;
+  }
+  .hero p.lead{
+    color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+  .hero-actions{ display:flex; flex-wrap:wrap; gap:14px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    padding: 14px 22px;
+    border-radius: 10px;
+    font-weight: 650;
+    font-size: 1rem;
+    text-decoration:none;
+    border: 1px solid transparent;
+  }
+  .btn-primary{
+    background: var(--accent);
+    color: var(--accent-contrast);
+  }
+  .btn-ghost{
+    color: var(--text);
+    border-color: var(--line);
+  }
+  .btn svg{ flex-shrink:0; }
+ 
+  .stats{
+    display:flex; gap: 34px; margin-top: 48px; flex-wrap:wrap;
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+  }
+  .stat b{ display:block; font-size: 1.5rem; font-family:'Sora',sans-serif; }
+  .stat span{ color: var(--muted); font-size: 0.88rem; }
+ 
+  /* SECTIONS */
+  section{ padding: 56px 0; }
+  .section-head{ margin-bottom: 32px; max-width: 56ch; }
+  .section-head h2{ font-size: clamp(1.5rem, 3.5vw, 2rem); margin: 0 0 10px; font-weight:750; }
+  .section-head p{ color: var(--muted); margin:0; }
+ 
+  /* PRODUCT GRID */
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+  }
+  .card{
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+  }
+  .card .tag{
+    display:inline-block;
+    font-size: 0.78rem;
+    color: var(--accent-2);
+    background: rgba(91,140,255,0.12);
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .card h3{ margin: 0 0 8px; font-size: 1.15rem; }
+  .card p{ color: var(--muted); margin: 0 0 16px; font-size: 0.93rem; }
+  .card a{
+    color: var(--accent);
+    text-decoration:none;
+    font-weight:600;
+    font-size: 0.92rem;
+  }
+ 
+  /* WHY US */
+  .why-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+    gap: 24px;
+  }
+  .why-item{ padding-top: 4px; }
+  .why-num{
+    font-family:'Sora',sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display:block;
+  }
+  .why-item h3{ margin: 0 0 8px; font-size: 1.05rem; }
+  .why-item p{ color: var(--muted); margin:0; font-size: 0.93rem; }
+ 
+  /* STEPS */
+  .steps{
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 24px;
+  }
+  .step b{ display:block; margin-bottom:6px; font-size:1rem; }
+  .step p{ color:var(--muted); margin:0; font-size:0.9rem; }
+ 
+  /* CONTACT */
+  .contact-panel{
+    background: linear-gradient(160deg, var(--bg-panel-2), var(--bg-panel));
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 44px 32px;
+    text-align:center;
+  }
+  .contact-panel h2{ margin: 0 0 12px; font-size: clamp(1.5rem,3.5vw,2rem); }
+  .contact-panel p{ color: var(--muted); margin: 0 0 28px; max-width: 42ch; margin-left:auto; margin-right:auto; }
+ 
+  footer{
+    border-top: 1px solid var(--line);
+    padding: 28px 0 calc(28px + env(safe-area-inset-bottom, 0px));
+    color: var(--muted);
+    font-size: 0.86rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+ 
+  /* Floating WA button */
+  .float-wa{
+    position: fixed;
+    right: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    z-index: 30;
+    display:flex; align-items:center; gap:10px;
+    background: var(--accent);
+    color: var(--accent-contrast);
+    padding: 13px 18px;
+    border-radius: 100px;
+    text-decoration:none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  }
+ 
+  @media (max-width: 640px){
+    .hero{ padding: 48px 0 40px; }
+    .nav a.cta{ padding: 8px 12px; font-size: 0.85rem; }
+    section{ padding: 40px 0; }
+    .float-wa span{ display:none; }
+    .float-wa{ padding: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="bg-glow"></div>
+ 
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="dot"></span> Andika JB</div>
+    <a class="cta" href="https://wa.me/6285852052113?text=Halo%20Andika%20JB%2C%20saya%20mau%20tanya%20tentang%20akun%20game" target="_blank" rel="noopener">Chat WA</a>
+  </div>
+</header>
+ 
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Jual beli Akun Game — Aman Terpercaya</p>
+      <h1>Cari Akun game? Andika JB bantu kamu mulai tanpa ribet.</h1>
+      <p class="lead">Jual beli akun game dengan Harga bersahabat, proses jelas, dan pendampingan buat kamu yang baru pertama kali beli akun. Tinggal chat, pilih, transaksi aman.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/6285852052113?text=Halo%20Andika%20JB%2C%20saya%20mau%20tanya%20tentang%20akun%20game" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.14.82.84-3.06-.2-.32a8.15 8.15 0 0 1-1.26-4.28c0-4.51 3.68-8.18 8.2-8.18 2.19 0 4.25.85 5.8 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.51-3.69 8.15-8.15 8.15Zm4.48-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+          Chat sekarang lewat WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#produk">Lihat kategori akun</a>
+      </div>
+ 
+      <div class="stats">
+        <div class="stat"><b>Ramah pemula</b><span>Penjelasan santai, gak pakai istilah ribet</span></div>
+        <div class="stat"><b>Respon cepat</b><span>Chat langsung dibalas via WhatsApp</span></div>
+        <div class="stat"><b>Proses jelas</b><span>Transaksi & data akun dijelaskan di awal</span></div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="produk">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Kategori akun game</h2>
+        <p>Beberapa contoh kategori yang tersedia. Stok dan harga terbaru bisa langsung ditanyakan lewat chat.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <span class="tag">Mobile</span>
+          <h3>Mobile Legends</h3>
+          <p>Akun dengan pilihan skin dan rank sesuai budget, cocok buat yang baru mulai main rank.</p>
+          <a href="https://wa.me/6285852052113?text=Halo%2C%20saya%20mau%20tanya%20akun%20Mobile%20Legends" target="_blank" rel="noopener">Tanya harga →</a>
+        </div>
+        <div class="card">
+          <span class="tag">Battle Royale</span>
+          <h3>Free Fire</h3>
+          <p>Akun dengan koleksi bundle dan skin senjata, tersedia beberapa pilihan harga.</p>
+          <a href="https://wa.me/6285852052113?text=Halo%2C%20saya%20mau%20tanya%20akun%20Free%20Fire" target="_blank" rel="noopener">Tanya harga →</a>
+        </div>
+        <div class="card">
+          <span class="tag">Mobile</span>
+          <h3>PUBG Mobile</h3>
+          <p>Akun dengan progres dan item in-game, dijelaskan detail sebelum transaksi.</p>
+          <a href="https://wa.me/6285852052113?text=Halo%2C%20saya%20mau%20tanya%20akun%20PUBG%20Mobile" target="_blank" rel="noopener">Tanya harga →</a>
+        </div>
+        <div class="card">
+          <span class="tag">Gacha</span>
+          <h3>Genshin Impact</h3>
+          <p>Akun dengan karakter dan senjata pilihan, cocok buat pemula yang mau langsung main karakter favorit.</p>
+          <a href="https://wa.me/6285852052113?text=Halo%2C%20saya%20mau%20tanya%20akun%20Genshin%20Impact" target="_blank" rel="noopener">Tanya harga →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Kenapa pilih Andika JB</h2>
+        <p>Dibuat khusus buat kamu yang baru pertama kali beli akun game dan belum tau harus mulai dari mana.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-num">01</span>
+          <h3>Penjelasan tanpa istilah ribet</h3>
+          <p>Setiap detail akun dijelaskan pelan-pelan, cocok buat yang belum terbiasa jual beli akun.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num">02</span>
+          <h3>Harga disesuaikan budget</h3>
+          <p>Ada pilihan di berbagai rentang harga, tinggal sebutkan budget kamu lewat chat.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-num">03</span>
+          <h3>Komunikasi langsung</h3>
+          <p>Semua tanya-jawab dan transaksi lewat WhatsApp, jadi kamu bisa pastikan dulu sebelum bayar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Cara belinya gampang</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><b>1. Chat via WhatsApp</b><p>Klik tombol chat, sebutkan game dan budget kamu.</p></div>
+        <div class="step"><b>2. Pilih akun</b><p>Andika kirim beberapa pilihan sesuai kebutuhan kamu.</p></div>
+        <div class="step"><b>3. Konfirmasi & bayar</b><p>Detail transaksi dijelaskan dulu sebelum kamu bayar.</p></div>
+        <div class="step"><b>4. Akun diserahkan</b><p>Data akun dikirim beserta panduan singkat pemakaian.</p></div>
+      </div>
+    </div>
+  </section>
+ 
+  <section>
+    <div class="wrap">
+      <div class="contact-panel">
+        <h2>Masih bingung mau mulai dari mana?</h2>
+        <p>Langsung chat aja, gak perlu sungkan. Andika bakal bantu jelasin sampai kamu ngerti sebelum beli.</p>
+        <a class="btn btn-primary" href="https://wa.me/6285852052113?text=Halo%20Andika%20JB%2C%20saya%20mau%20tanya%20tentang%20akun%20game" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.14.82.84-3.06-.2-.32a8.15 8.15 0 0 1-1.26-4.28c0-4.51 3.68-8.18 8.2-8.18 2.19 0 4.25.85 5.8 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.51-3.69 8.15-8.15 8.15Zm4.48-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+          085852052113 — Chat sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+ 
+<footer class="wrap">
+  <span>© 2026 Andika JB</span>
+  <span>Jual beli akun game aman terpercaya</span>
+</footer>
+ 
+<a class="float-wa" href="https://wa.me/6285852052113?text=Halo%20Andika%20JB%2C%20saya%20mau%20tanya%20tentang%20akun%20game" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.06h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.14.82.84-3.06-.2-.32a8.15 8.15 0 0 1-1.26-4.28c0-4.51 3.68-8.18 8.2-8.18 2.19 0 4.25.85 5.8 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.51-3.69 8.15-8.15 8.15Zm4.48-6.1c-.24-.12-1.45-.72-1.68-.8-.22-.08-.39-.12-.55.12-.16.24-.63.8-.78.96-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.16 1.51.1.46-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/></svg>
+  <span>Chat WA</span>
+</a>
+ 
+</body>
+</html>
+ 
